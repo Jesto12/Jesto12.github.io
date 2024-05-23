@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre mí</a></li>
+                <li><a href="#projects">Proyectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="home" class="section">
+            <h1>Bienvenido</h1>
+            <p>Hola, soy Erik. Bienvenido a mi portfolio donde podrás conocer más sobre mí, mis proyectos y cómo contactarme.</p>
+        </section>
+        <section id="about" class="section">
+            <h2>Sobre mí</h2>
+            <p>Me llamo Erik y soy programador. Tengo una pasión por la programación, y me dedico a crear proyectos principalmente en javascript y html.</p>
+            <p>Nací en España y he vivido en Alcalá de Henares.</p>
+            <p>En mi tiempo libre, disfruto de la programación, y me encanta aprender sobre sistemas operativos y nuevos proyectos. Soy un firme creyente en la educación continua y siempre busco nuevas formas de mejorar mis habilidades.</p>
+        </section>
+        <section id="projects" class="section">
+            <h2>Proyectos</h2>
+            <div class="project">
+                <h3>Proyecto 1: [Portfolio]</h3>
+                <p>Descripción del proyecto 1. Este proyecto se centra en como dice su nombre, un portfolio personal. Utilicé javascript, html y css para desarrollar este proyecto.</p>
+            </div>
+        </section>
+        <section id="contact" class="section">
+            <h2>Contacto</h2>
+            <p>Si deseas ponerte en contacto conmigo, puedes enviarme un correo o seguirme en mis redes sociales:</p>
+            <ul class="social-links">
+                <li><a href="mailto:erikcuzuban1@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/281/281769.png" alt="Correo"> erikcuzuban1@gmail.com</a></li>
+                <li><a href="https://twitter.com/ECuzuban" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/erik-cuzuban-97a89b2ab/" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://github.com/Jesto12" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Erik. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            document.querySelectorAll('nav ul li a').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    document.getElementById(targetId).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
